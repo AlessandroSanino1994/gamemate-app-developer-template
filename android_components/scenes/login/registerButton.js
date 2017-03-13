@@ -71,7 +71,7 @@ export class RegisterButton extends Component {
   render() {
     if(this.state.loading) {
       return (
-        <LoadingSpinner style={styles.spinner} animating={this.state.loading}/>
+        <LoadingSpinner style={styles.normal} animating={this.state.loading}/>
       );
     } else {
       return (
@@ -89,7 +89,7 @@ const styles = StyleSheet.create({
   normal : {
     flex:1,
     borderColor : 'black',
-    backgroundColor:'gray',
+    backgroundColor:'lightgray',
     justifyContent: 'center',
     alignItems: 'center',
     padding:10,

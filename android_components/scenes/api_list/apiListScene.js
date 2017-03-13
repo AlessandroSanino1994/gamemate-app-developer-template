@@ -54,7 +54,7 @@ export class ApiListScene extends Component {
   }
 
   _reqNewAPI() {
-    //this.setState({loading : true});
+    this.setState({adding : true});
     const request = {
       method : 'POST',
       headers : {
@@ -88,12 +88,12 @@ export class ApiListScene extends Component {
               ToastAndroid.show('There was a problem while getting the new token', ToastAndroid.LONG);
               break;
           }
-          //this.setState({loading : false});
+          this.setState({adding : false});
           //alert(JSON.stringify(responseJson));
         })
         .catch((error) => {
           ToastAndroid.show('Problems during the download of the tokens ' +  JSON.stringify(error), ToastAndroid.LONG);
-          //this.setState({loading : false});
+          this.setState({adding : false});
         });
   }
 
@@ -152,31 +152,56 @@ export class ApiListScene extends Component {
   }
 
   render() {
+    let partial = [];
     if(this.state.loading) {
-      return (
-        <View style={styles.container}>
-          <View style={[styles.container, styles.center]}>
-            <ActivityIndicator style={styles.loader} animating={true} size='large'/>
-            <Text style={styles.loaderText}>Loading tokens...</Text>
-          </View>
-          <ToggleButton style={[styles.buttonNormal, {maxHeight:100, borderRadius:0}]}
-                        onPressed={this.onPressedAdd}
-                        underlayColor='gray'
-                        text='Generate new token'/>
+      partial.push(
+        <View style={[styles.container, styles.center]}>
+          <ActivityIndicator style={styles.loader} animating={true} size='large'/>
+          <Text style={styles.loaderText}>Loading tokens...</Text>
         </View>
       );
-    } else return(
-      <View style={styles.container}>
+      if (this.state.adding) {
+        partial.push(
+          <LoadingSpinner style={[styles.buttonNormal, {height:100, borderRadius:0}]} animating={true} />
+        );
+      } else {
+        partial.push(
+          <ToggleButton style={[styles.buttonNormal, {height:100, borderRadius:0}]}
+                        underlayColor='gray'
+                        onPressed={this.onPressedAdd}
+                        text='Generate new token'/>
+        );
+      }
+      return (
+        <View style={styles.container}>
+          {partial}
+        </View>
+      );
+    } else {
+      partial.push(
         <ListView style={styles.list}
                   dataSource={this.state.datasource}
                   renderRow={this.renderRow}
           />
-        <ToggleButton style={[styles.buttonNormal, {height:100, borderRadius:0}]}
+      );
+      if (this.state.adding) {
+        partial.push(
+          <LoadingSpinner style={[styles.buttonNormal, {height:100, borderRadius:0}]} animating={true} />
+        );
+      } else {
+        partial.push(
+          <ToggleButton style={[styles.buttonNormal, {height:100, borderRadius:0}]}
                         underlayColor='gray'
                         onPressed={this.onPressedAdd}
                         text='Generate new token'/>
-      </View>
-    );
+        );
+      }
+      return (
+        <View style={styles.container}>
+          {partial}
+        </View>
+      );
+    }
   }
 
   _renderRow(singleItem) {
@@ -238,22 +263,40 @@ class TokenRow extends Component {
   }
 
   render() {
-    const visible = this.state.isDummy ? 0 : 1;
-    return (
-      <View style={styles.row}>
+    const { isDummy, removing } = this.state;
+    const visible = isDummy ? 0 : 1;
+    let partial = [];
+    partial.push(
         <Text style={styles.rowText}>
           {this.props.token}
         </Text>
-        {!this.state.isDummy &&
-        <View style={{flex:1, flexDirection:'row', marginRight:10}}>
-        <LoadingSpinner animating={this.state.removing} />
-        <ToggleButton
+    );
+    if(!isDummy) {
+      let partial2;
+      if(removing) {
+        partial2 = (
+          <LoadingSpinner style={[styles.buttonNormal, {flex:2, opacity : visible, margin:15}]}
+                          animating={true} />
+        );
+      } else {
+        partial2 = (
+          <ToggleButton
             style={[styles.buttonNormal, {flex:2, opacity : visible, margin:15}]}
             underlayColor='gray'
             onPressed={this.onRemoving}
             text='Drop'/>
-        </View>}
-      </View>
+        );
+      }
+      partial.push(
+        <View style={{flex:1, flexDirection:'row', marginRight:10}}>
+          {partial2}
+        </View>
+      )
+    }
+    return (
+        <View style={styles.row}>
+          {partial}
+        </View>
     );
   }
 }
