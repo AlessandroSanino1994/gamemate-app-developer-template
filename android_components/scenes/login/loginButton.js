@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import dismissKeyboard from 'dismissKeyboard';
 import { StyleSheet, Navigator, BackAndroid, ToastAndroid, View} from 'react-native';
 import { LoadingButton } from '../../buttons/loadingButton.js';
 import { ApiListScene } from '../api_list/apiListScene.js';
@@ -83,12 +84,13 @@ export class LoginButton extends Component {
       })
       .catch((error) => {
         this.setState({loading : false});
-        ToastAndroid.show('Cannot login : network error', ToastAndroid.SHORT)
+        ToastAndroid.show('Cannot login : network error ' + JSON.stringify(error), ToastAndroid.SHORT)
       });
     } else {
       this.setState({loading : false});
       ToastAndroid.show('Please fill username and password fields', ToastAndroid.SHORT);
     }
+    dismissKeyboard();
   }
 
   render() {

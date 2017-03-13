@@ -1,4 +1,8 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
+import { Application } from '../../../shared_components/application.js';
+import { LoadingButton } from '../../buttons/loadingButton.js';
+import { LoadingSpinner } from '../../misc/loadingSpinner.js';
+
 import {
   Text,
   StyleSheet,
@@ -7,9 +11,6 @@ import {
   ActivityIndicator,
   ToastAndroid
 } from 'react-native';
-import { Application } from '../../../shared_components/application.js';
-import { ToggleButton } from '../../buttons/toggleButton.js';
-import { LoadingSpinner } from '../../misc/loadingSpinner.js';
 
 const dummySources = [
   'An error occurred, please retry.'
@@ -152,56 +153,35 @@ export class ApiListScene extends Component {
   }
 
   render() {
+    const { loading, adding, datasource } = this.state;
     let partial = [];
-    if(this.state.loading) {
+    if(loading) {
       partial.push(
         <View style={[styles.container, styles.center]}>
           <ActivityIndicator style={styles.loader} animating={true} size='large'/>
           <Text style={styles.loaderText}>Loading tokens...</Text>
         </View>
       );
-      if (this.state.adding) {
-        partial.push(
-          <LoadingSpinner style={[styles.buttonNormal, {height:100, borderRadius:0}]} animating={true} />
-        );
-      } else {
-        partial.push(
-          <ToggleButton style={[styles.buttonNormal, {height:100, borderRadius:0}]}
-                        underlayColor='gray'
-                        onPressed={this.onPressedAdd}
-                        text='Generate new token'/>
-        );
-      }
-      return (
-        <View style={styles.container}>
-          {partial}
-        </View>
-      );
     } else {
       partial.push(
         <ListView style={styles.list}
-                  dataSource={this.state.datasource}
+                  dataSource={datasource}
                   renderRow={this.renderRow}
           />
       );
-      if (this.state.adding) {
-        partial.push(
-          <LoadingSpinner style={[styles.buttonNormal, {height:100, borderRadius:0}]} animating={true} />
-        );
-      } else {
-        partial.push(
-          <ToggleButton style={[styles.buttonNormal, {height:100, borderRadius:0}]}
-                        underlayColor='gray'
-                        onPressed={this.onPressedAdd}
-                        text='Generate new token'/>
-        );
-      }
-      return (
-        <View style={styles.container}>
-          {partial}
-        </View>
-      );
     }
+    partial.push(
+      <LoadingButton style={[styles.buttonNormal, {height:100, borderRadius:0}]}
+                     loading={adding}
+                     underlayColor='gray'
+                     onPress={this.onPressedAdd}
+                     text='Generate new token'/>
+    )
+    return (
+      <View style={styles.container}>
+        {partial}
+      </View>
+    );
   }
 
   _renderRow(singleItem) {
@@ -272,26 +252,16 @@ class TokenRow extends Component {
         </Text>
     );
     if(!isDummy) {
-      let partial2;
-      if(removing) {
-        partial2 = (
-          <LoadingSpinner style={[styles.buttonNormal, {flex:2, opacity : visible, margin:15}]}
-                          animating={true} />
-        );
-      } else {
-        partial2 = (
-          <ToggleButton
-            style={[styles.buttonNormal, {flex:2, opacity : visible, margin:15}]}
-            underlayColor='gray'
-            onPressed={this.onRemoving}
-            text='Drop'/>
-        );
-      }
       partial.push(
         <View style={{flex:1, flexDirection:'row', marginRight:10}}>
-          {partial2}
+          <LoadingButton
+            loading={removing}
+            style={[styles.buttonNormal, {flex:2, opacity : visible, margin:15}]}
+            underlayColor='gray'
+            onPress={this.onRemoving}
+            text='Drop'/>
         </View>
-      )
+      );
     }
     return (
         <View style={styles.row}>

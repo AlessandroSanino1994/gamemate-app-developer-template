@@ -11,6 +11,8 @@ import {
   ToastAndroid
 } from 'react-native';
 
+console.disableYellowBox = true;
+
 export default class GamemateDev extends Component {
   constructor(props) {
     super(props);

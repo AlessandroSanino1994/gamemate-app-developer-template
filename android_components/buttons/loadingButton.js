@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { StyleSheet } from 'react-native';
+import { LoadingSpinner } from '../misc/loadingSpinner.js';
 import { ToggleButton } from '../buttons/toggleButton.js';
 
 export class LoadingButton extends Component {

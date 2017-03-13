@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { LoginButton } from './loginButton.js';
 import { RegisterButton } from './registerButton.js';
+
 import {
   View,
   Text,
@@ -38,6 +39,8 @@ class LoginForm extends Component {
   }
 
   render() {
+    const { username, password } = this.state;
+    const { navigator } = this.props;
     return (
       <View>
         <TextInput
@@ -55,8 +58,8 @@ class LoginForm extends Component {
           maxLength={30}
           style={styles.textInput}
           returnKeyType="done"/>
-        <LoginButton ref='login' navigator={this.props.navigator} username={this.state.username} password={this.state.password}/>
-        <RegisterButton ref='registration' navigator={this.props.navigator}  username={this.state.username} password={this.state.password}/>
+        <LoginButton navigator={navigator} username={username} password={password}/>
+        <RegisterButton navigator={navigator}  username={username} password={password}/>
       </View>
     );
   }

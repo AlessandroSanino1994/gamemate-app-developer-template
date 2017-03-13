@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
+import dismissKeyboard from 'dismissKeyboard';
 import { StyleSheet, Navigator, ToastAndroid, View } from 'react-native';
-import { ToggleButton } from '../../buttons/toggleButton.js';
+import { LoadingButton } from '../../buttons/loadingButton.js';
 import { Application } from '../../../shared_components/application.js';
 import { ApiListScene } from '../api_list/apiListScene.js';
 import { LoadingSpinner } from '../../misc/loadingSpinner.js';
@@ -66,22 +67,18 @@ export class RegisterButton extends Component {
     else {
       ToastAndroid.show('Please fill username and password fields', ToastAndroid.SHORT);
     }
+    dismissKeyboard();
   }
 
   render() {
-    if(this.state.loading) {
-      return (
-        <LoadingSpinner style={styles.normal} animating={this.state.loading}/>
-      );
-    } else {
-      return (
-          <ToggleButton
-            style={styles.normal}
-            onPressed={this.onPressed}
-            underlayColor="gray"
-            text='Register'/>
-      );
-    }
+    return (
+      <LoadingButton
+        style={styles.normal}
+        loading={this.state.loading}
+        onPress={this.onPressed}
+        underlayColor='gray'
+        text='Register'/>
+    );
   }
 }
 
