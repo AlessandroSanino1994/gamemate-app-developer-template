@@ -1,42 +1,68 @@
 import React, { Component } from 'react';
-import { LoginPage } from './android_components/loginPage.js';
-import { Prova } from './android_components/prova.js';
+import { LoginScene } from './android_components/scenes/login/loginScene.js';
+import { ApiListScene } from './android_components/scenes/api_list/apiListScene.js';
+import { NavbarMapper } from './android_components/navbar/navbarMapper.js';
+
 import {
   AppRegistry,
   StyleSheet,
-  Text,
-  View,
-  TextInput,
-  ScrollView,
-  TouchableHighlight,
-  Navigator
+  Navigator,
+  BackAndroid,
+  ToastAndroid
 } from 'react-native';
 
-export default class TicTacToeExtreme extends Component {
+export default class GamemateDev extends Component {
+  constructor(props) {
+    super(props);
+  }
+
+  componentWillMount() {
+    let response = fetch('http://gamemate.di.unito.it:8080/', {
+      method : 'POST'
+    }).catch((error) => {
+      ToastAndroid.show('Please check your network connection', ToastAndroid.SHORT);
+    });
+  }
+
   render() {
     return (
       <Navigator style={{flex : 1}}
-        initialRoute={{name : "LoginPage", component : LoginPage, index : 0}}
+        ref='nav'
+        initialRoute={{name : 'Gamemate Developer', component : LoginScene, index : 0}}
         renderScene={this.renderScene}
-        configureScene={this.configureScene} />
+        configureScene={this.configureScene}
+        navigationBar={
+          <Navigator.NavigationBar
+          navigationStyles={Navigator.NavigationBar.StylesIOS}
+          routeMapper={NavbarMapper}
+          style={styles.navbar} />
+        } />
     );
   }
 
-  renderScene(route, navigator) {
-    if(route.name == "LoginPage")
-      return <LoginPage navigator={navigator} />;
-    else if (route.name == "Prova")
-      return <Prova navigator={navigator} />;
+  componentDidMount() {
+    BackAndroid.addEventListener('hardwareBackPress', () => { this.refs.nav.pop(); return this.refs.nav.getCurrentRoutes().length != 1;});
   }
 
-  configureScene(route, routeStack){
-   return Navigator.SceneConfigs.HorizontalSwipeJump;
+  renderScene(route, navigator) {
+    if(route.name == 'Gamemate Developer')
+      return <LoginScene navigator={navigator} />;
+    else if (route.name == 'Your API Tokens')
+      return <ApiListScene navigator={navigator} />;
+  }
+
+  configureScene(route, routeStack) {
+   return Navigator.SceneConfigs.PushFromRight; //FloatFromBottom
   }
 }
 
 const styles = StyleSheet.create({
-
+    navbar : {
+      backgroundColor : 'cyan',
+      borderBottomColor : 'lightblue',
+      borderBottomWidth : 1,
+      margin : 0
+    }
 });
 
-AppRegistry.registerComponent('TicTacToeExtreme', () => TicTacToeExtreme);
-//AppRegistry.registerComponent('LoginForm', () => LoginForm);
+AppRegistry.registerComponent('GamemateDev', () => GamemateDev);

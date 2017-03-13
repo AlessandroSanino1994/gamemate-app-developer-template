@@ -1,5 +1,5 @@
 {
-	"name": "TicTacToeExtreme",
+	"name": "GamemateDev",
 	"version": "0.0.1",
 	"private": true,
 	"scripts": {
@@ -8,7 +8,11 @@
 	},
 	"dependencies": {
 		"react": "~15.4.0",
-		"react-native": "0.41.2"
+		"react-native": "0.41.2",
+		"react-native-vector-icons": "^4.0.0",
+		"realm": "^1.0.2",
+		"rnpm": "^1.9.0",
+    "react-native-vector-icons" : "^1"
 	},
 	"devDependencies": {
 		"babel-jest": "19.0.0",
