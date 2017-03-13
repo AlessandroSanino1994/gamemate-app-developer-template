@@ -31,9 +31,7 @@ export class ApiListScene extends Component {
       loading : true,
       datasource : dataSourceModel.cloneWithRows([]),
       rows : [],
-      isDummy : false,
-      token : '',
-      selectedToken : ''
+      isDummy : false
     });
   }
 
@@ -148,6 +146,7 @@ export class ApiListScene extends Component {
             datasource : dataSourceModel.cloneWithRows(dummySources),
             loading : false
           });
+          console.warn(JSON.stringify(error));
           //alert(JSON.stringify(error));
         });
   }
@@ -239,6 +238,7 @@ class TokenRow extends Component {
     }).catch((error) => {
       ToastAndroid.show('Unknown error while handling response, retry later '  + JSON.stringify(error), ToastAndroid.SHORT);
       this.setState({removing : false});
+      console.warn(JSON.stringify(error));
     });
   }
 

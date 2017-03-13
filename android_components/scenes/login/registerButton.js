@@ -56,12 +56,13 @@ export class RegisterButton extends Component {
                 break;
               default:
                 this.setState({loading : false});
-                ToastAndroid.show('Unknown error, retry later' + JSON.stringify(responseJson), ToastAndroid.LONG);
+                ToastAndroid.show('Unknown error, retry later', ToastAndroid.LONG);
                 break;
             }
           }).catch((error) => {
             this.setState({loading : false});
             ToastAndroid.show('Please check your network connection', ToastAndroid.SHORT);
+            console.warn(JSON.stringify(error));
           });
     }
     else {
