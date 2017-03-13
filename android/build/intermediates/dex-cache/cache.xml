@@ -5,22 +5,15 @@
         jar="/home/alessandro/WebstormProjects/Tic Tac Toe Extreme/gamemate-app-developer-template/android/app/build/intermediates/exploded-aar/GamemateDev/react-native-vector-icons/unspecified/jars/classes.jar"
         jumboMode="false"
         revision="23.0.1"
-        sha1="6120b4b4c797e627715128866f654f25d1ef535c">
+        sha1="2fe4587df6035a6777a25950acb11d1e4899260b">
         <dex dex="/home/alessandro/WebstormProjects/Tic Tac Toe Extreme/gamemate-app-developer-template/android/app/build/intermediates/pre-dexed/debug/classes-2b369028407f16571672c4acd2691b003f07470c.jar" />
     </item>
     <item
         jar="/home/alessandro/WebstormProjects/Tic Tac Toe Extreme/gamemate-app-developer-template/android/app/build/intermediates/exploded-aar/GamemateDev/realm/unspecified/jars/classes.jar"
         jumboMode="false"
         revision="23.0.1"
-        sha1="6cd6cc470a7eb367217c9141b733b3b8f47b6a37">
+        sha1="9a6b73a071048cc151b945f4b66c20acde6cdced">
         <dex dex="/home/alessandro/WebstormProjects/Tic Tac Toe Extreme/gamemate-app-developer-template/android/app/build/intermediates/pre-dexed/debug/classes-8d532563f444c2b9acb1579f064e9cfcad1c61af.jar" />
-    </item>
-    <item
-        jar="/home/alessandro/.gradle/caches/modules-2/files-2.1/org.nanohttpd/nanohttpd/2.2.0/73a02117620b6cc7683a1ed6ae24c2f36e2a715/nanohttpd-2.2.0.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="073a02117620b6cc7683a1ed6ae24c2f36e2a715">
-        <dex dex="/home/alessandro/WebstormProjects/Tic Tac Toe Extreme/gamemate-app-developer-template/android/app/build/intermediates/pre-dexed/debug/nanohttpd-2.2.0-4acf4ffaf694f837b6f0d4f6e048d7d09128ffc5.jar" />
     </item>
 
 </items>
