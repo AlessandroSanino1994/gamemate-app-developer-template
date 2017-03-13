@@ -60,7 +60,7 @@ export class RegisterButton extends Component {
             }
           }).catch((error) => {
             this.setState({loading : false});
-            ToastAndroid.show('Please check your network connection ', ToastAndroid.SHORT);
+            ToastAndroid.show('Please check your network connection', ToastAndroid.SHORT);
           });
     }
     else {

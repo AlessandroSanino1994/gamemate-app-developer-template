@@ -83,7 +83,7 @@ export class LoginButton extends Component {
       })
       .catch((error) => {
         this.setState({loading : false});
-        ToastAndroid.show('Cannot login : network error ' +JSON.stringify(error), ToastAndroid.SHORT)
+        ToastAndroid.show('Cannot login : network error', ToastAndroid.SHORT)
       });
     } else {
       this.setState({loading : false});
