@@ -73,9 +73,6 @@ export class LoginButton extends Component {
             this.props.navigator.push({
               name : 'Your API Tokens',
               component : ApiListScene,
-              passProps : {
-                username : username
-              }
             });
             break;
           default:
@@ -86,7 +83,7 @@ export class LoginButton extends Component {
       })
       .catch((error) => {
         this.setState({loading : false});
-        ToastAndroid.show('Cannot login : network error', ToastAndroid.SHORT)
+        ToastAndroid.show('Cannot login : network error ' +JSON.stringify(error), ToastAndroid.SHORT)
       });
     } else {
       this.setState({loading : false});

@@ -43,13 +43,16 @@ class LoginForm extends Component {
         <TextInput
           placeholder='Email'
           onChangeText={(username) => this.setState({username})}
-          style={{flex:1, maxHeight:70}}/>
+          style={{flex:1, maxHeight:70}}
+          returnKeyType="next"
+          onSubmitEditing={() => {this.refs.password.focus()}}/>
         <TextInput
           ref='password'
           onChangeText={(password) => this.setState({password})}
           placeholder='Password'
           secureTextEntry={true}
-          style={{flex:1, maxHeight:70, width:300}}/>
+          style={{flex:1, maxHeight:70, width:300}}
+          returnKeyType="done"/>
         <LoginButton ref='login' navigator={this.props.navigator} username={this.state.username} password={this.state.password}/>
         <RegisterButton ref='registration' navigator={this.props.navigator}  username={this.state.username} password={this.state.password}/>
       </View>
