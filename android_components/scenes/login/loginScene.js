@@ -41,7 +41,6 @@ class LoginForm extends Component {
     return (
       <View>
         <TextInput
-          autoFocus={true}
           placeholder='Email'
           onChangeText={(username) => this.setState({username})}
           style={{flex:1, maxHeight:70}}/>

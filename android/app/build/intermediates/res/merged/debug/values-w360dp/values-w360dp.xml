@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- From: file:/home/alessandro/WebstormProjects/Tic%20Tac%20Toe%20Extreme/GamemateDev/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values-w360dp/values-w360dp.xml -->
+    <!-- From: file:/home/alessandro/Scrivania/gamemate-app-developer-template/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values-w360dp/values-w360dp.xml -->
     <eat-comment/>
     <integer name="abc_max_action_buttons">3</integer>
 </resources>
