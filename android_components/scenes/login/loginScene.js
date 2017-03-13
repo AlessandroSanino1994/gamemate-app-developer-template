@@ -43,15 +43,17 @@ class LoginForm extends Component {
         <TextInput
           placeholder='Email'
           onChangeText={(username) => this.setState({username})}
-          style={{flex:1, maxHeight:70}}
+          style={styles.textInput}
           returnKeyType="next"
+          maxLength={30}
           onSubmitEditing={() => {this.refs.password.focus()}}/>
         <TextInput
           ref='password'
           onChangeText={(password) => this.setState({password})}
           placeholder='Password'
           secureTextEntry={true}
-          style={{flex:1, maxHeight:70, width:300}}
+          maxLength={30}
+          style={styles.textInput}
           returnKeyType="done"/>
         <LoginButton ref='login' navigator={this.props.navigator} username={this.state.username} password={this.state.password}/>
         <RegisterButton ref='registration' navigator={this.props.navigator}  username={this.state.username} password={this.state.password}/>
@@ -76,5 +78,10 @@ const styles = StyleSheet.create({
   loginMessage : {
     color : 'gray',
     margin:10
+  },
+  textInput : {
+    flex:1,
+    maxHeight:70,
+    width:300
   }
 });

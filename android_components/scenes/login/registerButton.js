@@ -21,9 +21,9 @@ export class RegisterButton extends Component {
   }
 
   _onPressed() {
-    this.setState({loading : true});
     const { username, password } = this.props;
     if (username != null && username != '' && password != null && password != '') {
+      this.setState({loading : true});
       let request = {
         method : 'POST',
         headers : {

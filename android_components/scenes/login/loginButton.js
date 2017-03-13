@@ -21,9 +21,9 @@ export class LoginButton extends Component {
   }
 
   _onPressed() {
-    this.setState({loading : true});
     const { username, password } = this.props;
-    if (username != null && username != "" && password != null && password != "") {
+    if (username != null && username != '' && password != null && password != '') {
+      this.setState({loading : true});
       const request = {
         method: 'POST',
         headers: {
@@ -31,7 +31,7 @@ export class LoginButton extends Component {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          Type:"DevAuth",
+          Type:'DevAuth',
           Email: username,
           Password: password,
           API_Token: Application.APIToken
@@ -87,7 +87,7 @@ export class LoginButton extends Component {
       });
     } else {
       this.setState({loading : false});
-      ToastAndroid.show("Please fill username and password fields", ToastAndroid.SHORT);
+      ToastAndroid.show('Please fill username and password fields', ToastAndroid.SHORT);
     }
   }
 
@@ -101,7 +101,7 @@ export class LoginButton extends Component {
           <ToggleButton
             style={styles.normal}
             onPressed={this.onPressed}
-            underlayColor="gray"
+            underlayColor='gray'
             text='Login'/>
       );
     }
