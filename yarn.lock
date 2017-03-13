@@ -3374,7 +3374,7 @@ readline2@^1.0.1:
     is-fullwidth-code-point "^1.0.0"
     mute-stream "0.0.5"
 
-realm@^1.0.2:
+realm@^1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/realm/-/realm-1.1.1.tgz#253d55626497023e5f40129a9d60759143f789f4"
   dependencies:
