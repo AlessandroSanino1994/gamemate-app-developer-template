@@ -1,21 +1,29 @@
 import React, { Component } from 'react';
-import { TouchableHighlight, Text } from 'react-native';
+import { TouchableHighlight, Text, StyleSheet } from 'react-native';
 
 export class ToggleButton extends Component {
   constructor(props) {
     super(props);
-    this.onPress = this.props.onPressed.bind(this);
+    this.onPress = this.props.onPressed != undefined ? this.props.onPressed.bind(this) : undefined;
   }
 
   render() {
+    const {style, onPressed, underlayColor, text } = this.props;
     return (
-      <TouchableHighlight style={this.props.style}
-                          onPress={this.onPress}
-                          underlayColor={this.props.underlayColor}>
+      <TouchableHighlight style={style != undefined ? style : styles.default}
+                          onPress={onPressed != undefined ? this.onPress : () => {alert("undefined behavior")}}
+                          underlayColor={underlayColor != undefined ? underlayColor : "gray"}>
         <Text>
-          {this.props.text}
+          {text != undefined ? text : ""}
         </Text>
       </TouchableHighlight>
     );
   }
 }
+
+const styles = StyleSheet.create({
+  default : {
+    flex:1,
+    backgroundColor:"lightgray"
+  }
+});

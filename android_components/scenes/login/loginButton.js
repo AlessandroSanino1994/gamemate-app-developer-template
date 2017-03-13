@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { StyleSheet, Navigator, BackAndroid, ToastAndroid, View} from 'react-native';
-import { ToggleButton } from '../../buttons/toggleButton.js';
+import { LoadingButton } from '../../buttons/loadingButton.js';
 import { ApiListScene } from '../api_list/apiListScene.js';
 import { Application } from '../../../shared_components/application.js';
 import { LoadingSpinner } from '../../misc/loadingSpinner.js';
@@ -92,19 +92,14 @@ export class LoginButton extends Component {
   }
 
   render() {
-    if(this.state.loading) {
-      return (
-        <LoadingSpinner style={styles.normal} animating={this.state.loading}/>
-      );
-    } else {
-      return (
-          <ToggleButton
+    return (
+          <LoadingButton
             style={styles.normal}
-            onPressed={this.onPressed}
+            loading={this.state.loading}
+            onPress={this.onPressed}
             underlayColor='gray'
             text='Login'/>
-      );
-    }
+    );
   }
 }
 
