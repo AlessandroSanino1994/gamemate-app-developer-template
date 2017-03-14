@@ -43,7 +43,13 @@ export default class GamemateDev extends Component {
   }
 
   componentDidMount() {
-    BackAndroid.addEventListener('hardwareBackPress', () => { this.refs.nav.pop(); return this.refs.nav.getCurrentRoutes().length != 1;});
+    BackAndroid.addEventListener('hardwareBackPress', () => {
+       const invalidBack = this.refs.nav != undefined &&
+                           this.refs.nav.getCurrentRoutes().length != 1;
+       if(invalidBack)
+         this.refs.nav.pop();
+       return invalidBack;
+     });
   }
 
   renderScene(route, navigator) {
