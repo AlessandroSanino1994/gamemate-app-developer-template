@@ -16,6 +16,7 @@ console.disableYellowBox = true;
 export default class GamemateDev extends Component {
   constructor(props) {
     super(props);
+    this.handleBackButtonPress = this._handleBackButtonPress.bind(this);
   }
 
   componentWillMount() {
@@ -43,14 +44,16 @@ export default class GamemateDev extends Component {
   }
 
   componentDidMount() {
-    BackAndroid.addEventListener('hardwareBackPress', () => {
-       const invalidBack = this.refs.nav != undefined &&
-                           this.refs.nav.getCurrentRoutes().length != 1;
-       if(invalidBack)
-         this.refs.nav.pop();
-       return invalidBack;
-     });
+    BackAndroid.addEventListener('hardwareBackPress', this.handleBackButtonPress);
   }
+
+  _handleBackButtonPress() {
+     const invalidBack = this.refs.nav != undefined &&
+                         this.refs.nav.getCurrentRoutes().length != 1;
+     if(invalidBack)
+       this.refs.nav.pop();
+     return invalidBack;
+   }
 
   renderScene(route, navigator) {
     if(route.name == 'Gamemate Developer')
