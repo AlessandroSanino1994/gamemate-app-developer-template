@@ -9,6 +9,7 @@
 	"dependencies": {
 		"react": "~15.4.0",
 		"react-native": "0.41.2",
+		"react-native-clipboard": "^0.0.5",
 		"react-native-vector-icons": "^4.0.0",
 		"realm": "^1.1.1",
 		"rnpm": "^1.9.0"

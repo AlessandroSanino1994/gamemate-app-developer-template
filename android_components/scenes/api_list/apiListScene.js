@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Application } from '../../../shared_components/application.js';
 import { LoadingButton } from '../../buttons/loadingButton.js';
 import { LoadingSpinner } from '../../misc/loadingSpinner.js';
+import { Clipboard } from 'react-native-clipboard';
 
 import {
   Text,
@@ -23,7 +24,7 @@ export class ApiListScene extends Component {
     super(props);
     this.renderRow = this._renderRow.bind(this);
     this.onPressedAdd = this._reqNewAPI.bind(this);
-    this.RemoveHandler = this._RemoveHandler.bind(this);
+    this.removeHandler = this._removeHandler.bind(this);
   }
 
   componentWillMount() {
@@ -43,7 +44,7 @@ export class ApiListScene extends Component {
   }
 
 
-  _RemoveHandler(token) {
+  _removeHandler(token) {
     this.state.rows.splice(this.state.rows.indexOf(token), 1);
     const rows = this.state.rows;
     this.setState({
@@ -185,7 +186,7 @@ export class ApiListScene extends Component {
 
   _renderRow(singleItem) {
     return (
-      <TokenRow token={singleItem} isDummy={this.state.isDummy} RemoveHandler={this.RemoveHandler}/>
+      <TokenRow token={singleItem} isDummy={this.state.isDummy} removeHandler={this.removeHandler}/>
     );
   }
 }
@@ -194,6 +195,7 @@ class TokenRow extends Component {
   constructor(props) {
     super(props);
     this.onRemoving = this._onRemoving.bind(this);
+    this.copyToClipboard = this._copyToClipboard.bind(this);
   }
 
   componentWillMount() {
@@ -225,7 +227,7 @@ class TokenRow extends Component {
       switch (responseJson.Type) {
         case 'DropToken':
           ToastAndroid.show('Token successfully deleted', ToastAndroid.SHORT);
-          this.props.RemoveHandler(this.props.token);
+          this.props.removeHandler(this.props.token);
           break;
         case 'ErrorDetail':
           ToastAndroid.show('Error : ' + responseJson.ErrorMessage, ToastAndroid.SHORT);
@@ -242,12 +244,17 @@ class TokenRow extends Component {
     });
   }
 
+  _copyToClipboard() {
+    Clipboard.set(this.props.token);
+    ToastAndroid.show('Copied to clipboard', ToastAndroid.SHORT);
+  }
+
   render() {
     const { isDummy, removing } = this.state;
     const visible = isDummy ? 0 : 1;
     let partial = [];
     partial.push(
-        <Text style={styles.rowText}>
+        <Text style={styles.rowText} onPress={this.copyToClipboard}>
           {this.props.token}
         </Text>
     );
