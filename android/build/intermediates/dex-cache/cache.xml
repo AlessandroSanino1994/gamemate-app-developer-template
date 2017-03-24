@@ -5,14 +5,14 @@
         jar="/home/alessandro/WebstormProjects/Tic Tac Toe Extreme/gamemate-app-developer-template/android/app/build/intermediates/exploded-aar/GamemateDev/react-native-vector-icons/unspecified/jars/classes.jar"
         jumboMode="false"
         revision="23.0.1"
-        sha1="2fe4587df6035a6777a25950acb11d1e4899260b">
+        sha1="cde13724d3a7dcad303243fb1095e1a465148102">
         <dex dex="/home/alessandro/WebstormProjects/Tic Tac Toe Extreme/gamemate-app-developer-template/android/app/build/intermediates/pre-dexed/debug/classes-2b369028407f16571672c4acd2691b003f07470c.jar" />
     </item>
     <item
         jar="/home/alessandro/WebstormProjects/Tic Tac Toe Extreme/gamemate-app-developer-template/android/app/build/intermediates/exploded-aar/GamemateDev/realm/unspecified/jars/classes.jar"
         jumboMode="false"
         revision="23.0.1"
-        sha1="9a6b73a071048cc151b945f4b66c20acde6cdced">
+        sha1="e0256b01f6dcc16aa927ae4de3d973807afd99eb">
         <dex dex="/home/alessandro/WebstormProjects/Tic Tac Toe Extreme/gamemate-app-developer-template/android/app/build/intermediates/pre-dexed/debug/classes-8d532563f444c2b9acb1579f064e9cfcad1c61af.jar" />
     </item>
 
