@@ -40,7 +40,6 @@ export class ApiListScene extends Component {
       setTimeout(() => {
         this.getTokens();
       }, 300); //waiting for UI to show before requesting, navigator animation end.
-      //TODO : find another way, like triggering navigator.
   }
 
 

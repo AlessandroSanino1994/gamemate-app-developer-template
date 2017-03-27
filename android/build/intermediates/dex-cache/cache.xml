@@ -2,6 +2,41 @@
 <items version="2" >
 
     <item
+        jar="/home/alessandro/WebstormProjects/Tic Tac Toe Extreme/gamemate-app-developer-template/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.41.2/jars/libs/infer-annotations-1.5.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="dcac634e137395f79693ec760f081a86eb2bd84e">
+        <dex dex="/home/alessandro/WebstormProjects/Tic Tac Toe Extreme/gamemate-app-developer-template/android/app/build/intermediates/pre-dexed/release/infer-annotations-1.5-92fc93cd94222cc4ae622bf89e31c6b51b383cfc.jar" />
+    </item>
+    <item
+        jar="/home/alessandro/WebstormProjects/Tic Tac Toe Extreme/gamemate-app-developer-template/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline/0.11.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="3341b66c54367e777a0647e2db96c045329bfeab">
+        <dex dex="/home/alessandro/WebstormProjects/Tic Tac Toe Extreme/gamemate-app-developer-template/android/app/build/intermediates/pre-dexed/release/classes-9a2ed1b77edba3f0d28b2b05753614d562f0a61d.jar" />
+    </item>
+    <item
+        jar="/home/alessandro/WebstormProjects/Tic Tac Toe Extreme/gamemate-app-developer-template/android/app/build/intermediates/exploded-aar/com.facebook.fresco/fresco/0.11.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="d31aadf33187c37a7cd63dc1b769f8c6e33f78c3">
+        <dex dex="/home/alessandro/WebstormProjects/Tic Tac Toe Extreme/gamemate-app-developer-template/android/app/build/intermediates/pre-dexed/release/classes-edbe5522ec638adc11a880d36a7fe122e85ded6c.jar" />
+    </item>
+    <item
+        jar="/home/alessandro/Programmi/android-sdk-linux/extras/android/m2repository/com/android/support/support-annotations/23.4.0/support-annotations-23.4.0.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="ffbe55fdb2bb456b1485831706a9eac3300bb6b8">
+        <dex dex="/home/alessandro/WebstormProjects/Tic Tac Toe Extreme/gamemate-app-developer-template/android/app/build/intermediates/pre-dexed/release/support-annotations-23.4.0-2249923d47bc828639a8fcf7971e1ea6a14c9abd.jar" />
+    </item>
+    <item
+        jar="/home/alessandro/WebstormProjects/Tic Tac Toe Extreme/gamemate-app-developer-template/android/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/jars/libs/internal_impl-23.4.0.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="ea3c07504d2c8f4b13aa17c45c1b68ed9c1c3674">
+        <dex dex="/home/alessandro/WebstormProjects/Tic Tac Toe Extreme/gamemate-app-developer-template/android/app/build/intermediates/pre-dexed/release/internal_impl-23.4.0-3a4cd96c48f73df2a94eac4f044b01afbd88f3fd.jar" />
+    </item>
+    <item
         jar="/home/alessandro/WebstormProjects/Tic Tac Toe Extreme/gamemate-app-developer-template/android/app/build/intermediates/exploded-aar/GamemateDev/react-native-vector-icons/unspecified/jars/classes.jar"
         jumboMode="false"
         revision="23.0.1"
@@ -9,11 +44,144 @@
         <dex dex="/home/alessandro/WebstormProjects/Tic Tac Toe Extreme/gamemate-app-developer-template/android/app/build/intermediates/pre-dexed/debug/classes-2b369028407f16571672c4acd2691b003f07470c.jar" />
     </item>
     <item
+        jar="/home/alessandro/.gradle/caches/modules-2/files-2.1/com.google.code.findbugs/jsr305/3.0.0/5871fb60dc68d67da54a663c3fd636a10a532948/jsr305-3.0.0.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="5871fb60dc68d67da54a663c3fd636a10a532948">
+        <dex dex="/home/alessandro/WebstormProjects/Tic Tac Toe Extreme/gamemate-app-developer-template/android/app/build/intermediates/pre-dexed/release/jsr305-3.0.0-8dff6cd664bb0b4d6960b8db22f133fb1bcc75ef.jar" />
+    </item>
+    <item
+        jar="/home/alessandro/WebstormProjects/Tic Tac Toe Extreme/gamemate-app-developer-template/android/app/build/intermediates/exploded-aar/com.facebook.fresco/drawee/0.11.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="1137942adeb03984c1311b662363dd38fc238fd3">
+        <dex dex="/home/alessandro/WebstormProjects/Tic Tac Toe Extreme/gamemate-app-developer-template/android/app/build/intermediates/pre-dexed/release/classes-0c77cde98e7b8970f0beaa2b5c7b8f1dc74cfdbd.jar" />
+    </item>
+    <item
+        jar="/home/alessandro/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.4.1/c7c4f9e35c2fd5900da24f9872e3971801f08ce0/okhttp-3.4.1.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="c7c4f9e35c2fd5900da24f9872e3971801f08ce0">
+        <dex dex="/home/alessandro/WebstormProjects/Tic Tac Toe Extreme/gamemate-app-developer-template/android/app/build/intermediates/pre-dexed/release/okhttp-3.4.1-06ea6ad20d1e8dcba0a0c80ae41df7a855c3b8c3.jar" />
+    </item>
+    <item
+        jar="/home/alessandro/WebstormProjects/Tic Tac Toe Extreme/gamemate-app-developer-template/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.41.2/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="b49a04a3016689b372ecbb77f0c33e486e768cca">
+        <dex dex="/home/alessandro/WebstormProjects/Tic Tac Toe Extreme/gamemate-app-developer-template/android/app/build/intermediates/pre-dexed/release/classes-0ae92ed21946bb13543475015a651739e6bd99ed.jar" />
+    </item>
+    <item
+        jar="/home/alessandro/WebstormProjects/Tic Tac Toe Extreme/gamemate-app-developer-template/android/app/build/intermediates/exploded-aar/com.facebook.soloader/soloader/0.1.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="8f615bca00639150c9eb6175d4b5471193f70794">
+        <dex dex="/home/alessandro/WebstormProjects/Tic Tac Toe Extreme/gamemate-app-developer-template/android/app/build/intermediates/pre-dexed/release/classes-3b4f3d2ffdb6173cb780e324149a983a3c0f501d.jar" />
+    </item>
+    <item
+        jar="/home/alessandro/.gradle/caches/modules-2/files-2.1/com.nineoldandroids/library/2.4.0/e9b63380f3a242dbdbf103a2355ad7e43bad17cb/library-2.4.0.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="e9b63380f3a242dbdbf103a2355ad7e43bad17cb">
+        <dex dex="/home/alessandro/WebstormProjects/Tic Tac Toe Extreme/gamemate-app-developer-template/android/app/build/intermediates/pre-dexed/release/library-2.4.0-17077c7565c589c52c58fdab674426e580a59c95.jar" />
+    </item>
+    <item
+        jar="/home/alessandro/WebstormProjects/Tic Tac Toe Extreme/gamemate-app-developer-template/android/app/build/intermediates/exploded-aar/com.facebook.fresco/fbcore/0.11.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="98786c1770b531b9194fb6448b2a2692c64074b6">
+        <dex dex="/home/alessandro/WebstormProjects/Tic Tac Toe Extreme/gamemate-app-developer-template/android/app/build/intermediates/pre-dexed/release/classes-18e9bf54a0a05010a8b466fbdaffdb8ddba5df96.jar" />
+    </item>
+    <item
+        jar="/home/alessandro/.gradle/caches/modules-2/files-2.1/javax.inject/javax.inject/1/6975da39a7040257bd51d21a231b76c915872d38/javax.inject-1.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="6975da39a7040257bd51d21a231b76c915872d38">
+        <dex dex="/home/alessandro/WebstormProjects/Tic Tac Toe Extreme/gamemate-app-developer-template/android/app/build/intermediates/pre-dexed/release/javax.inject-1-b8ebd49e236c3ec9a9c1313a678ef50efc6554ef.jar" />
+    </item>
+    <item
+        jar="/home/alessandro/.gradle/caches/modules-2/files-2.1/com.facebook.fbui.textlayoutbuilder/staticlayout-proxy/1.0/f162442a19fff13995fbd51ba414d9ee05579080/staticlayout-proxy-1.0.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="f162442a19fff13995fbd51ba414d9ee05579080">
+        <dex dex="/home/alessandro/WebstormProjects/Tic Tac Toe Extreme/gamemate-app-developer-template/android/app/build/intermediates/pre-dexed/release/staticlayout-proxy-1.0-deb8f8381fc14830af9e0943b84f38c775f9670b.jar" />
+    </item>
+    <item
+        jar="/home/alessandro/WebstormProjects/Tic Tac Toe Extreme/gamemate-app-developer-template/android/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="67bd36ee9340ec7c254108936ad16b24bed160cc">
+        <dex dex="/home/alessandro/WebstormProjects/Tic Tac Toe Extreme/gamemate-app-developer-template/android/app/build/intermediates/pre-dexed/release/classes-61ed53bc06c676ae091164a165af6a8fe5030889.jar" />
+    </item>
+    <item
+        jar="/home/alessandro/WebstormProjects/Tic Tac Toe Extreme/gamemate-app-developer-template/android/app/build/intermediates/exploded-aar/com.facebook.fbui.textlayoutbuilder/textlayoutbuilder/1.0.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="f90b593491e4044903f0bbf68dc3fa2790b151b9">
+        <dex dex="/home/alessandro/WebstormProjects/Tic Tac Toe Extreme/gamemate-app-developer-template/android/app/build/intermediates/pre-dexed/release/classes-2027d0d10b24d7a865925b04f6d50519fc9856a2.jar" />
+    </item>
+    <item
+        jar="/home/alessandro/WebstormProjects/Tic Tac Toe Extreme/gamemate-app-developer-template/android/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.4.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="ec75036c3c52e451d0cde50a5aedaf5fd32354a0">
+        <dex dex="/home/alessandro/WebstormProjects/Tic Tac Toe Extreme/gamemate-app-developer-template/android/app/build/intermediates/pre-dexed/release/classes-f28f929f0c9f40588097a3f4719b62f675ccae6a.jar" />
+    </item>
+    <item
+        jar="/home/alessandro/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-tasks/1.4.0/d85884acf6810a3bbbecb587f239005cbc846dc4/bolts-tasks-1.4.0.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="d85884acf6810a3bbbecb587f239005cbc846dc4">
+        <dex dex="/home/alessandro/WebstormProjects/Tic Tac Toe Extreme/gamemate-app-developer-template/android/app/build/intermediates/pre-dexed/release/bolts-tasks-1.4.0-faa9387364e7c233c0839812d0ca9142ab47f7fd.jar" />
+    </item>
+    <item
+        jar="/home/alessandro/WebstormProjects/Tic Tac Toe Extreme/gamemate-app-developer-template/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline-base/0.11.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="ca63c521b5745ae9a09629d7ca67ff6bc2a967fe">
+        <dex dex="/home/alessandro/WebstormProjects/Tic Tac Toe Extreme/gamemate-app-developer-template/android/app/build/intermediates/pre-dexed/release/classes-dc136f9fc1be1291e4ba2021831afd9365644ef7.jar" />
+    </item>
+    <item
+        jar="/home/alessandro/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.9.0/f824591a0016efbaeddb8300bee54832a1398cfa/okio-1.9.0.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="f824591a0016efbaeddb8300bee54832a1398cfa">
+        <dex dex="/home/alessandro/WebstormProjects/Tic Tac Toe Extreme/gamemate-app-developer-template/android/app/build/intermediates/pre-dexed/release/okio-1.9.0-91641a63d2c105159457ae4c074ea09ea6e34817.jar" />
+    </item>
+    <item
         jar="/home/alessandro/WebstormProjects/Tic Tac Toe Extreme/gamemate-app-developer-template/android/app/build/intermediates/exploded-aar/GamemateDev/realm/unspecified/jars/classes.jar"
         jumboMode="false"
         revision="23.0.1"
         sha1="e0256b01f6dcc16aa927ae4de3d973807afd99eb">
         <dex dex="/home/alessandro/WebstormProjects/Tic Tac Toe Extreme/gamemate-app-developer-template/android/app/build/intermediates/pre-dexed/debug/classes-8d532563f444c2b9acb1579f064e9cfcad1c61af.jar" />
+    </item>
+    <item
+        jar="/home/alessandro/WebstormProjects/Tic Tac Toe Extreme/gamemate-app-developer-template/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline-okhttp3/0.11.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="2b8a01ad9da5d26d0067894c22e87597bca2c500">
+        <dex dex="/home/alessandro/WebstormProjects/Tic Tac Toe Extreme/gamemate-app-developer-template/android/app/build/intermediates/pre-dexed/release/classes-0d72f96b38269d967b6c755cdf7de221fbe271ae.jar" />
+    </item>
+    <item
+        jar="/home/alessandro/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp-urlconnection/3.4.1/63994437f62bc861bc20c605d12962f7246116d1/okhttp-urlconnection-3.4.1.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="63994437f62bc861bc20c605d12962f7246116d1">
+        <dex dex="/home/alessandro/WebstormProjects/Tic Tac Toe Extreme/gamemate-app-developer-template/android/app/build/intermediates/pre-dexed/release/okhttp-urlconnection-3.4.1-e468b2305029fde501be6163bba26fbe60b93deb.jar" />
+    </item>
+    <item
+        jar="/home/alessandro/WebstormProjects/Tic Tac Toe Extreme/gamemate-app-developer-template/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
+        <dex dex="/home/alessandro/WebstormProjects/Tic Tac Toe Extreme/gamemate-app-developer-template/android/app/build/intermediates/pre-dexed/release/classes-8ee034c21672d8b4408bbb012698604e0f676e0d.jar" />
+    </item>
+    <item
+        jar="/home/alessandro/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp-ws/3.4.1/8ace66ef7002d98f633377c9e67daeeb196d8c3b/okhttp-ws-3.4.1.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="8ace66ef7002d98f633377c9e67daeeb196d8c3b">
+        <dex dex="/home/alessandro/WebstormProjects/Tic Tac Toe Extreme/gamemate-app-developer-template/android/app/build/intermediates/pre-dexed/release/okhttp-ws-3.4.1-5e83ec2a6b94361be1d82051c0c20f82bd12a440.jar" />
     </item>
 
 </items>
